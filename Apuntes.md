@@ -46,3 +46,41 @@ Vue.component('vmodel',{
     })
 
 ```
+
+## Emitir eventos
+
+- Para emitir eventos a root, $emit(nombre del evento, variable)
+
+
+Componente <emit>
+```javascript
+
+Vue.component('emit', {
+    data() {
+        return{
+        carBrand: 'Toyota'
+    }
+},
+ <p @click="$emit('show_car_brand', carBrand)">
+
+```
+
+index <root> Declaramos el componente e instanciamos el nombre del evento y a través del método que en data declaramos.
+```javascript
+     <emit @show_car_brand="showCarBrandFromEmitCmp"></emit>
+
+     <script>
+        new Vue({
+          el: '#app',
+          methods:{
+            showCarBrandFromEmitCmp (carBrand){
+              alert(carBrand)
+            }
+          }
+      })
+    </script>
+
+
+```
+
+
