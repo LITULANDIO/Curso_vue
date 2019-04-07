@@ -1,16 +1,16 @@
-##Requisitos
+## Requisitos
 - Tener instalado:
 
-##Node js
+## Node js
 - https://nodejs.org/es/download/
 
-##Servidor local
+## Servidor local
 npm install http-server -g
 - Usage => http-server
 
-##Dev-tools
+## Dev-tools
 extensión google chrome
 
-##IDE
+## IDE
 - Web storm / Visual ST Code / Sublime
 
