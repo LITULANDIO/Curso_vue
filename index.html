@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <script src="components/message.js"></script>
+    <script src="components/computed-properties.js"></script>
+    https://www.youtube.com/watch?v=1o3T6Xs1de4
+
+</head>
+<body>
+    <div id="app" style="margin-bottom: 100px">
+      holix world
+        <computed-properties></computed-properties>
+    </div>
+    
+    <script>
+        new Vue({
+          el: '#app',
+
+          data () {
+            return {
+              appName: 'Iniciando con Vuejs 2'
+            }
+        }
+      })
+    </script>
+</body>
+</html>
