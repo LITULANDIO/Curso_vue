@@ -13,7 +13,7 @@
 
 ## METHODS
 
-Nos permite agrupar instancias y agruparlas en una única función. Con la propiedad this podemos instanciar cualquier función.
+- Nos permite agrupar instancias y agruparlas en una única función. Con la propiedad this podemos instanciar cualquier función.
 
 ```javascript
  methods:{
@@ -22,4 +22,27 @@ Nos permite agrupar instancias y agruparlas en una única función. Con la propi
         }
 
     },
+```
+
+## DATA BINDING V-MODEL
+
+- Con v-model podemos cambiar el valor de la variable en tiempo real.
+
+```javascript
+
+Vue.component('vmodel',{
+    data () {
+        return{
+           framework: 'Vuejs 2'
+        }
+    },
+        template: `
+            <div>
+                <h2>Trabajando con vmodel</h2>
+                <input v-model="framework" />
+                <p>El framework escogido es: {{ framework }}</p>
+            </div>
+        `
+    })
+
 ```
