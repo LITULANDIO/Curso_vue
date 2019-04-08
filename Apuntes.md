@@ -47,7 +47,7 @@ Vue.component('vmodel',{
 
 ```
 
-## Emitir eventos
+## Emitir eventos a componentes padres con $emit
 
 - Para emitir eventos a root, $emit(nombre del evento, variable)
 
@@ -82,5 +82,26 @@ index <root> Declaramos el componente e instanciamos el nombre del evento y a tr
 
 
 ```
+## Acceso a datos del cmp padre al cmp hijo
 
+- En el index o cmp padre
+```javascript
+     data () {
+            return {
+              appName: 'Iniciando con vuejs'
+            }
 
+```
+- En el cmp hijo => para poder acceder al dato de un componente padre usamos $parent.dato
+```javascript
+Vue.component('parent-data', {
+
+    template: `
+      <div>
+        <h2>Acceso a datos del cmp padre desde el cmp hijo</h2>
+        <p>{{ $parent.appName }}</p>
+      </div>
+        `
+})
+
+```
