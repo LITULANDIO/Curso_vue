@@ -105,3 +105,28 @@ Vue.component('parent-data', {
 })
 
 ```
+
+## Acceso a datos del cmp hijo al cmp padre
+
+- Para ello utiliaremos referncias => ref, en el componente instanciamos ref="cualquierNombre"
+```html
+<child-data ref="childData"></child-data>
+
+```
+- En el componente hijo:
+```javascript
+Vue.component('child-data', {
+  data (){
+    return{
+      cmpName: 'Child Data cmp'
+    }
+  },
+```
+- En el componente padre, para acceder al dato del cmp hijo usaremos el hook mounted, creamos una variable, instanciamos con this.$refs.(nombre de la ref).dato_del_hijo
+```javascript
+  mounted (){
+            const cmpName = this.$refs.childData.cmpName;
+            console.log(cmpName);
+          },
+
+```
