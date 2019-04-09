@@ -130,3 +130,29 @@ Vue.component('child-data', {
           },
 
 ```
+
+## Bucles con V-for
+
+- Para iterar un array, o array de objetos, tenemos la directiva v-for
+
+´´´javascript
+<ul v-if="frameworks.length">
+                <li v-for="(framework, index) in frameworks" :key="framework.id">
+                    ({{ index }}) - {{ framework.name }}
+                </li>
+            </ul>
+
+´´´
+
+- index, es por si nos interesa saber el ínidice del array, :key con dos puntos identifica que es una variable
+
+## Condicionales v-if v-else-if
+
+```javascript
+ <input v-model="age"/>
+            <p v-if="age < 18 ">Menor de edad</p>
+            <p v-else-if="age >= 18 && age < 30">Mayor de edad y menor de 30</p>
+            <p v-else-if="age >= 30 && age < 65">30 años o más y menor de 65</p>
+            <p v-else>Estás jubilado</p>
+
+```
